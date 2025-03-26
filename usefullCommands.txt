@@ -1,0 +1,22 @@
+##### network manager #####
+nmtui `graphical network manager`
+
+##### rar #####
+rar a [fileName] [NAME] `create a rar with the name of NAME with content of fileName`
+unrar l [fileName] `list all content of rar`
+rar x [fileName] `extract fileName`
+7z x [fileName].exe `extract exe file`
+
+##### tar #####
+
+tar -ztvf [archive name] `lists content of char`
+tar –xvzf [archive name] `extract gz file`
+tar --zstd -xvf [archive name] `extract zst file`
+
+c - creates a new archive.
+z - compresses the file.
+f - specifies the file name.
+x - instructs tar to extract the files from the zipped file.
+v - lists out the files it's extracting.
+z - instructs tar to decompress the files.
+f - tells tar the filename.

@@ -1,0 +1,32 @@
+entry shortcut and charlimit for tasks
+hower and shortcut for setting
+adding delete for themes
+add drag to move task from top to buttom for task
+iconpacks
+theme char limit
+task char limit
+learn this phrase const validateSubstitute = (name: string): name is keyof typeof substitutes => name in substitutes
+background change animation
+
+widgets
+wifi
+power
+blutooth
+media
+workspace
+volume
+time
+
+new widgets
+calander
+countDown
+app launcher
+clipbord
+note pad 
+screen record
+game launcher
+streak counter
+
+maybe
+right click for hyprland
+task group with diffrent colors

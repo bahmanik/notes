@@ -1,0 +1,8 @@
+<C><S>G loading last result into less
+<C><S>S Pass selection to program
+<C><S><F11> Toggle fullscreen
+
+<C>W delete the word
+<C>U delete the whole line
+<C>J ente enter
+

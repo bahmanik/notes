@@ -1,0 +1,22 @@
+git config --get user.name
+
+git config --add --global user.name "bahmanik"
+git config --add --global user.email "bahmaniali350@gmail.com"
+
+vim ~/.gitconfig
+
+git status
+git add 
+git commit -m "name of commit"
+git log
+git log --graph
+git cat-file -p <hash>  { ~/.gitconfig }
+git branch -m <old name> <name name> { rename a branch }
+git switch -c <new branch name>  { create a new branch and switch to it }
+
+git uses sha to hash
+
+git add .
+git commit -m "added favorite launcher"
+git status
+git push origin main

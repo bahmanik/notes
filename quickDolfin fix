@@ -1,0 +1,13 @@
+sudo pacman -Rsn kservice5
+
+//getting the plasma-workspace
+wget https://archlinux.org/packages/extra/x86_64/plasma-workspace/download/
+
+//unziping
+tar --use-compress-program=unzstd -xvf plasma-workspace-6.2.3-1-x86_64.pkg.tar.zst
+
+cd /path/to/archive/content
+sudo cp -a etc/xdg/menus/plasma-applications.menu /etc/xdg/menus
+sudo cp -ar usr/share/desktop-directories /usr/share
+
+XDG_MENU_PREFIX=plasma- kbuildsycoca6

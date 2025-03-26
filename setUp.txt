@@ -1,0 +1,35 @@
+//installing pacagesg needed for nvim
+sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
+//then install your personal nvim package or install kickstart nvim
+
+//installing needed packages
+sudo pacman -S dart-sass fd brightnessctl swww fzf hyprpicker slurp wf-recorder wl-clipboard swappy libayatana-appindicator cmake make scdoc clang rust ripgrep unzip gcc ripgrep ttf-nerd-fonts-symbols less jcal vimiv imagemagick fuse ntfs-3g pacman-contrib power-profiles-daemonpacman-contrib power-profiles-daemon 7zip
+
+//install yay and yay packages
+mkdir ~/git && cd ~/git/ && sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si libreoffice-fresh
+yay -S asusctl wayshot supergfxctl matugen rar
+
+//manual setting
+add multilib to vim /etc/pacman.conf 
+systemctl enable fstream.timer
+
+cheak this out hyprsunset-git hypridle-git
+
+//install xdman without yay
+
+//blutooth
+sudo pacman -S bluez bluez-utils
+sudo systemctl enable bluetooth.service
+
+//rate mirrors
+yay -S rate-mirrors
+
+//with bu
+export TMPFILE="$(mktemp)"; \
+    sudo true; \
+    rate-mirrors --save=$TMPFILE arch --max-delay=43200 \
+      && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
+      && sudo mv $TMPFILE /etc/pacman.d/mirrorlist
+
+//without bu
+rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist

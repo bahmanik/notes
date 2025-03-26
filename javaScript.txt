@@ -1,0 +1,24 @@
+function vs => function
+1- this
+2- argument list
+3- pre access
+
+new loops
+1- for in : for looping array
+2- for of : for looping Obj
+
+object methods
+1- keys
+2- values
+3- entries
+
+spread and rest operators
+1- shallow copy
+2- concat arrys
+3 arguments in function
+
+new functional programing
+1- find : return the first item in array than satisfy a condition
+2- find index : return the index of first item in array than satisfy a condition
+3- some : if one or more satisfy condition retun true
+4- every : if every element stisfy the condition returns true

@@ -1,0 +1,16 @@
+type of array
+1- int[]
+2- Array<int>
+
+example of uninion
+type user = "admin" | "guest" | "member"
+
+prop!.name (name is never null)
+prop?.name (name isnt necessary)
+
+utillity types
+partial<name of type> (turn every property of type to optional)
+required<name of type> (turn every property of type to mandetory)
+partial<name of type> (turn every property of type to read only)
+omit<name of type, omited properties> (remove the omited properties)
+nonNullable<name of type> (every property that isnt null)

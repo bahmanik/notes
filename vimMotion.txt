@@ -1,0 +1,27 @@
+### small letters
+t jump to before the {symbol}
+f jump after the {symbol}
+
+0 end of line
+$ start of line
+% jump bracket
+
+### Capital letters
+T jump to before the privios {symbol}
+F jump to after the privios {symbol}
+
+### function ###
+ctrl + 6 previus page
+gcc comment line
+gcb comment bluck
+gd go to definition
+
+### setting ###
+:set number
+:set relativenumber
+:set mouse=a (active)
+:set  shiftwidth={number}
+:colorscheme {name}
+:set tabstop= {num}
+:w  write
+:q quit
