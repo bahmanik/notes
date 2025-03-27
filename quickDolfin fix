@@ -1,13 +1,13 @@
-sudo pacman -Rsn kservice5
+pkgname=plasma-workspace
+pkgver=6.0.4
+_dirver=$(echo $pkgver | cut -d. -f1-3)
 
-//getting the plasma-workspace
-wget https://archlinux.org/packages/extra/x86_64/plasma-workspace/download/
-
-//unziping
-tar --use-compress-program=unzstd -xvf plasma-workspace-6.2.3-1-x86_64.pkg.tar.zst
-
-cd /path/to/archive/content
-sudo cp -a etc/xdg/menus/plasma-applications.menu /etc/xdg/menus
-sudo cp -ar usr/share/desktop-directories /usr/share
-
-XDG_MENU_PREFIX=plasma- kbuildsycoca6
+mkdir temp && cd temp
+wget "https://download.kde.org/stable/plasma/$_dirver/$pkgname-$pkgver.tar.xz"
+# note the filename that was downloaded
+tar -xJf plasma-workspace-6.0.4.tar.xz
+find . -name "*.menu"
+mkdir ~/.config/menus
+cp plasma-workspace-6.0.4/menu/desktop/plasma-applications.menu ~/.config/menus/applications.menu
+kbuildsycoca6
+cd .. && rm -rf temp

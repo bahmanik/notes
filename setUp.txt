@@ -6,8 +6,11 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 sudo pacman -S dart-sass fd brightnessctl swww fzf hyprpicker slurp wf-recorder wl-clipboard swappy libayatana-appindicator cmake make scdoc clang rust ripgrep unzip gcc ripgrep ttf-nerd-fonts-symbols less jcal vimiv imagemagick fuse ntfs-3g pacman-contrib power-profiles-daemonpacman-contrib power-profiles-daemon 7zip
 
 //install yay and yay packages
-mkdir ~/git && cd ~/git/ && sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si libreoffice-fresh
 yay -S asusctl wayshot supergfxctl matugen rar
+
+//install choatic aur
+//install wind from Choatic aur
+//install winetricks and comctl6
 
 //manual setting
 add multilib to vim /etc/pacman.conf 
