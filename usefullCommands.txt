@@ -20,3 +20,7 @@ x - instructs tar to extract the files from the zipped file.
 v - lists out the files it's extracting.
 z - instructs tar to decompress the files.
 f - tells tar the filename.
+
+##### pacman #####
+sudo pacman -Rsn //fully removing package
+sudo pacman -Sc //removing cashes
