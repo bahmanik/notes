@@ -20,3 +20,9 @@ git add .
 git commit -m "added favorite launcher"
 git status
 git push origin main
+git remote set-url origin git@github.com:bahmanik/reposetory_name.git
+ssh -T git@github.com
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
