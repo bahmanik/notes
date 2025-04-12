@@ -24,3 +24,28 @@ f - tells tar the filename.
 ##### pacman #####
 sudo pacman -Rsn //fully removing package
 sudo pacman -Sc //removing cashes
+
+##### mirror #####
+//with bu
+export TMPFILE="$(mktemp)"; \
+    sudo true; \
+    rate-mirrors --save=$TMPFILE arch --max-delay=43200 \
+      && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
+      && sudo mv $TMPFILE /etc/pacman.d/mirrorlist
+
+//without bu
+rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
+
+##### fancontrol #####
+yay -S asusctl supergfxctl
+sudo systemctl enable --now asusctl supergfxd
+
+to set a custom fan curve for the CPU fan, you’d use:
+
+asusctl fan set cpu 40:0,50:20,60:30,70:40,80:60,90:80 
+
+And for the GPU fan:
+
+asusctl fan set gpu 40:0,50:20,60:30,70:40,80:60,90:80 
+
+In these commands, the pairs like 40:0 mean that below 40°C the fan runs at 0% speed, and between the specified temperature thresholds the fan speed increases gradually.
