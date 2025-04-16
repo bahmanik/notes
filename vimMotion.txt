@@ -25,3 +25,52 @@ gd go to definition
 :set tabstop= {num}
 :w  write
 :q quit
+
+################################
+######## adding snipet #########
+################################
+
+1. Create a Snippet File for C++
+
+LuaSnip supports different formats (Lua, VSCode JSON, SnipMate). Based on your setup, I’ll show you the Lua format.
+
+Create the snippet file:
+
+mkdir -p ~/.config/nvim/lua/snippets
+
+Then create a file:
+
+touch ~/.config/nvim/lua/snippets/cpp.lua
+
+2. Write Your C++ Snippets in Lua
+
+Edit cpp.lua and add this:
+
+local ls = require("luasnip")
+local s = ls.snippet
+local t = ls.text_node
+local i = ls.insert_node
+
+return {
+  s("main", {
+    t({ "#include <iostream>", "", "int main() {", "    " }),
+    i(1, "// code"),
+    t({ "", "    return 0;", "}" }),
+  }),
+  s("fori", {
+    t("for (int "), i(1, "i"), t(" = 0; "), rep(1), t(" < "), i(2, "n"),
+    t("; "), rep(1), t("++) {"), t({ "", "    " }),
+    i(0),
+    t({ "", "}" }),
+  }),
+}
+
+You can add more snippets in the same file using the same s(...) pattern.
+
+3. Load the Snippets in Your Config
+
+In your init.lua or your LuaSnip plugin config (it looks like you're already using Lazy), load the snippets like this:
+
+require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/lua/snippets" })
+
+Place this in your LuaSnip plugin setup block inside init.lua.

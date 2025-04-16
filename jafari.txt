@@ -1,0 +1,7 @@
+source git/GiftShop/venv/bin/activate # run to statr venv
+python git/GiftShop/project/manage.py runserver_plus # runs backend
+python manage.py migrate # updating database
+python manage.py createsuperuser # creating super user
+
+cd /home/ali/git/GiftShop/project/apps/frontend/vite-react && bun dev
+

@@ -13,6 +13,8 @@ git log --graph
 git cat-file -p <hash>  { ~/.gitconfig }
 git branch -m <old name> <name name> { rename a branch }
 git switch -c <new branch name>  { create a new branch and switch to it }
+git pull origin <name of branch> { update local base on origin }
+git reset { remove git add }
 
 git uses sha to hash
 
