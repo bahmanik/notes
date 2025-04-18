@@ -1,0 +1,1 @@
+motion @react-three/fiber @react-three/drei framer-motion framer-motion-3d sass
